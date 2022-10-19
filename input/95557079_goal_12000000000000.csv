@@ -1,1 +1,5 @@
-date,campaign_name,channel_grouping,source,medium,ad_content,goal_12_completions
+view_id,date,campaign_name,channel_grouping,source,medium,ad_content,goal_12_completions
+95557079,10/16/2022,2018 - loans - search - keywords préstamos search,Paid Search,google,cpc,(not set),2
+95557079,10/16/2022,2018 - loans - search - branded search,Paid Search,google,cpc,(not set),2
+95557079,10/16/2022,2020 - loans - display - discovery,Paid Search,google,cpc,(not set),1
+95557079,10/16/2022,fee220111cr01-codespl2022,(Other),merchpapelprestamos5.99paraloquenecesites,merchpapelprestamos5.99paraloquenecesites,(not set),1

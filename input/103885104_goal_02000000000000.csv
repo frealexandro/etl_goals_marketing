@@ -1,1 +1,7 @@
-date,campaign_name,channel_grouping,source,medium,ad_content,goal_2_completions
+view_id,date,campaign_name,channel_grouping,source,medium,ad_content,goal_2_completions
+103885104,10/16/2022,DeShow 2022 - REO - Search - Casas Renta - 05 Jul 2022 - FLT1_ ///FEE211227ES01   ,Paid Search,google,cpc,deShow,1
+103885104,10/16/2022,DeShow 2022 - REO - Search - Casas Renta - 05 Jul 2022 - FLT1_ ///FEE211227ES01   ,Paid Search,google,cpc,Casas para Renta,1
+103885104,10/16/2022,DeShow 2022 - REO - Search - Casas Renta - 05 Jul 2022 - FLT1_ ///FEE211227ES01   ,Paid Search,google,cpc,(not set),2
+103885104,10/16/2022,DeShow 2022 - REO - Search - Casas Venta - 05 Jul 2022 - FLT1_ ///FEE211227ES01   ,Paid Search,google,cpc,(not set),17
+103885104,10/16/2022,DeShow 2022 - REO - Search - Casas Venta - 05 Jul 2022 - FLT1_ ///FEE211227ES01   ,Paid Search,google,cpc,Si buscas casas en venta,2
+103885104,10/16/2022,DeShow 2022 - REO - Search - Apartamentos Venta - 05 Jul 2022 - FLT1 _ ///FEE211227ES01   ,Paid Search,google,cpc,Apartamentos en venta,2
