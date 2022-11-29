@@ -1,27 +1,27 @@
 # Etl_Marketing
 
-_En este proyecto encontramos una cloud function en gcp utilizando el framework de FLASK que mediante el llamado de un un cloud Scheduler ejecuta un ETL que deja el resultado en un bucket de GCP _
+_In this project we find a cloud function in gcp using the FLASK framework that by calling a cloud Scheduler executes an ETL that leaves the result in a GCP bucket _
 
-## Comenzando 🚀
+## Starting 🚀
 
-_Para obtener el proyecto en tu maquina local porfavor clone el repositorio con el nombre de **Pipeline_cloudFunction**, Recuerda que debes tener permiso de la organizacion_
+_To get the project on your local machine please clone the repository with the name of **Pipeline_cloudFunction**, remember that you must have permission from the organization_
 
-### Pre-requisitos 📋
+### Pre requirements 📋
 
-_Este proyecto se debe ejecutar directaente en una cloud function de GCP con lenguaje de **Python 3.10** o si se desea tambien se puede ejecutar directamente en tu maquina virtual con algunas modificaciones .Debes instalar las siguientes dependencias en la cloud function o en  entorno vrtual contenidas en el archivo requeriments.txt_
+_This project must be run directly in a GCP cloud function with **Python 3.10** language or if desired it can also be run directly in your virtual machine with some modifications. You must install the following dependencies in the cloud function or environment vrtual contained in the file requirements.txt_
 
 ```
 pip install -r requeriments.txt
 ```
-_En la cloud function solo es necesario cargar el archivo, una vez esta haga el DEPLOY de esta se instalaran automaticamente las dependencias_
+_In the cloud function it is only necessary to load the file, once it is done DEPLOY it, the dependencies will be installed automatically_
 
 
-### Instalación 🔧
+###installation 🔧
 
 
-1.se debe crear una cloud function en GCP con un trigger de HTTP request alli se deben cargar todos los archivos que se encuentran dentro de el repositorio y se
-deben establecer las diferentes rutas de donde se extraeran los archivos y las ruta donde se dejara el resultado de el ETL estas rutas estan establecidas el archivo de 
-**params.py** alli ademas tambien se encuentran la informacion complementaria para extraer los distintos datos
+1.a cloud function must be created in GCP with a trigger of HTTP request there all the files found within the repository must be uploaded and
+They must establish the different paths from which the files will be extracted and the paths where the result of the ETL will be left. These paths are established in the output file.
+**params.py** there are also complementary information to extract the different data
 
 
 ```
@@ -29,22 +29,22 @@ deben establecer las diferentes rutas de donde se extraeran los archivos y las r
 
 ```
 
-2.debes establecer la ruta en la que va a terminar la data en GCP contenida en un bucket en cloud storage ,esta tambien puede ser modificada en el arhivo **params.py**
+2.You must establish the route in which the data will end up in GCP contained in a bucket in cloud storage, this can also be modified in the file **params.py**
 
 ```
 'gs://jobs_goal_completions/result_goal_completions/'
 
 ```
 
-## Ejecutando las pruebas ⚙️
+## running the tests ⚙️
 
 
-_La cloud function se encuentra en su maximo funcionamiento es un ETL diseñado para pequeñas cantidades de data, En caso de que sea mas gigante a futuros se debe iplementar una solucion mas escalable con otro servicio de google cloud pero nos referimos tal vez mas de 50 gb de procesamiento , por ahora la cloud fuction al estar diseñada con POO es relativamente muy estable y escalable_
+_The cloud function is at its maximum performance, it is an ETL designed for small amounts of data. In the event that it is more gigantic in the future, a more scalable solution must be implemented with another google cloud service, but we are referring to perhaps more than 50 gb of processing, for now the cloud function, being designed with OOP, is relatively very stable and scalable_
 
-### Analice las pruebas end-to-end 🔩
+###Analyze end-to-end tests🔩
 
 
-_Si todo el proceso se ejecuta correctamente, te saldran en el response de la cloud function este mensaje **the extract GOALS SSS started**y en los logs de GCP apareceran estos mensajes_
+_If the whole process is executed correctly, the cloud function response will show this message **the extract GOALS SSS started** and these messages will appear in the GCP logs_
 
 ```
 params is SSS ok
@@ -55,9 +55,9 @@ merge is SSS ok
 
 ```
 
-### estilo de codificación ⌨️
+### coding style ⌨️
 
-_Este programa se modularizo en su totalidad mediante programcion orientada a objetos y tambien se intento codificar bajo el regimen del **pep 8**_
+_This program was completely modularized through object-oriented programming and also attempted to be codified under the **pep 8** regime._
 
 
 
@@ -69,14 +69,14 @@ _Este programa se modularizo en su totalidad mediante programcion orientada a ob
 
 ## Versionado 📌
 
-Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/di-contactica/Pipeline_cloudFunction).
+For all available versions, see the [tags en este repositorio](https://github.com/frealexandro/Etl_goals_marketing).
 
 ## Autores ✒️
 
 
 * **Santiago Novoa** - *Trabajo Inicial - Documentacion * - [Frealexandro](https://github.com/frealexandro)
 
-* También puedes mirar la lista de todos los [contribuyentes](https://github.com/orgs/di-contactica/people) quíenes han participado en este proyecto. 
+
 
 
 ## Expresiones de Gratitud 🎁
