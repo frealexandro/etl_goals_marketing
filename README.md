@@ -1,77 +1,69 @@
 # Etl_Marketing
 
-_In this project we find a cloud function in gcp using the FLASK framework that by calling a cloud Scheduler executes an ETL that leaves the result in a GCP bucket _
+In this project, we use a GCP cloud function built with the FLASK framework to execute an ETL process. The cloud function is triggered by a cloud Scheduler and the result is saved in a GCP bucket.
 
 ## Starting 🚀
 
-_To get the project on your local machine please clone the repository with the name of **Pipeline_cloudFunction**, remember that you must have permission from the organization_
+To get the project on your local machine, please clone the repository named **Pipeline_cloudFunction**. Note that you must have permission from the organization.
 
-### Pre requirements 📋
+### Prerequisites 📋
 
-_This project must be run directly in a GCP cloud function with **Python 3.10** language or if desired it can also be run directly in your virtual machine with some modifications. You must install the following dependencies in the cloud function or environment vrtual contained in the file requirements.txt_
+This project must be run directly on a GCP cloud function with **Python 3.10** or, with some modifications, it can also be run on a virtual machine. The following dependencies must be installed in the cloud function or virtual environment, as listed in the `requirements.txt` file:
+
 
 ```
 pip install -r requeriments.txt
 ```
-_In the cloud function it is only necessary to load the file, once it is done DEPLOY it, the dependencies will be installed automatically_
+In the cloud function, simply upload the file and DEPLOY, the dependencies will be installed automatically.
 
+## Overview
+This code is used to classify and merge data from a website's goals, read from a file and fix any problems with the data. The output is saved in a CSV file.
 
-###installation 🔧
+## Dependencies
+This code depends on the following modules:
 
+- Params
+- Read_trans
+- Merge_data
+- Clasify_df
 
-1.a cloud function must be created in GCP with a trigger of HTTP request there all the files found within the repository must be uploaded and
-They must establish the different paths from which the files will be extracted and the paths where the result of the ETL will be left. These paths are established in the output file.
-**params.py** there are also complementary information to extract the different data
+## Function: run()
+The `run()` function is the main function of the code. It contains the following steps:
 
+1. The function calls the `params()` function from the `Params` module to read the parameters needed for the code.
+2. The function uses the `read_trans()` function from the `Read_trans` module to read the file containing the website's goals, and the `read_transf()` function to transform the goals.
+3. The function uses the `read_clasify()` function from the `Clasify_df` module to classify the data in the file into different lists: `filecls_2_m1`, `filecls_2_m2`, and `list_goalname`.
+4. The function uses the `clean()` function from the `Clasify_df` module to clean the lists obtained in the previous step.
+5. The function uses the `merge()` function from the `Merge_data` module to merge the data in the lists and the file obtained in step 2.
+6. The function saves the resulting dataframe to a CSV file in the specified location.
 
-```
-'gs://jobs_goal_completions/{file}.csv'
+### Note
+The commented out lines of code in the `run()` function are related to the `Fix_Goals` class from the `Fix_Goals` module, which is used to extract and fix any problems with the goals data. This functionality is not currently being used in the code, but it's kept in the script for future reference or development.
 
-```
+## Usage
+To use this code, simply run the `run()` function in the script.
 
-2.You must establish the route in which the data will end up in GCP contained in a bucket in cloud storage, this can also be modified in the file **params.py**
+## Running the Tests ⚙️
 
-```
-'gs://jobs_goal_completions/result_goal_completions/'
+The cloud function is designed to handle small amounts of data. If the data volume increases in the future, a more scalable solution must be implemented using another Google Cloud service. However, this is only necessary for processing more than 50 GB of data. For now, the cloud function, being designed with OOP, is relatively very stable and scalable.
 
-```
+### Analyze end-to-end tests🔩
 
-## running the tests ⚙️
-
-
-_The cloud function is at its maximum performance, it is an ETL designed for small amounts of data. In the event that it is more gigantic in the future, a more scalable solution must be implemented with another google cloud service, but we are referring to perhaps more than 50 gb of processing, for now the cloud function, being designed with OOP, is relatively very stable and scalable_
-
-###Analyze end-to-end tests🔩
-
-
-_If the whole process is executed correctly, the cloud function response will show this message **the extract GOALS SSS started** and these messages will appear in the GCP logs_
-
-```
-params is SSS ok
-read and transf is SSS ok
-clasify is SSS ok
-clean is SSS ok
-merge is SSS ok
-
-```
-
-### coding style ⌨️
-
-_This program was completely modularized through object-oriented programming and also attempted to be codified under the **pep 8** regime._
+If the whole process is executed correctly, the cloud function response will show the message **the extract GOALS SSS started** and the following
 
 
 
-## Construido con 🛠️
+## Built With  🛠️
 
 * [PEP-8](https://peps.python.org/pep-0008/#id8)- Guia de Parametrizacion
 * [PANDAS](https://pandas.pydata.org/) - Libreria manipulacion data
 * [FLASK](https://flask.palletsprojects.com/en/2.2.x/) - Freamwork API
 
-## Versionado 📌
+## Versioning 📌
 
 For all available versions, see the [tags en este repositorio](https://github.com/frealexandro/Etl_goals_marketing).
 
-## Autores ✒️
+## Autors ✒️
 
 
 * **Santiago Novoa** - *Trabajo Inicial - Documentacion * - [Frealexandro](https://github.com/frealexandro)
@@ -79,7 +71,4 @@ For all available versions, see the [tags en este repositorio](https://github.co
 
 
 
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
 
